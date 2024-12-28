@@ -1,0 +1,21 @@
+[project]
+name = "jmagics"
+version = "0.1.0"
+description = "Magics for jupyter notebook"
+authors = [
+    {name = "Sreenath Somarajapuram", email = "somarajapuram@gmail.com"},
+]
+dependencies = [
+    "matplotlib"
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
