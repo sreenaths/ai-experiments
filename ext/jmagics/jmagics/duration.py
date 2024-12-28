@@ -89,6 +89,7 @@ class DurationMagics(Magics):
             plt.text(value * 1.01, i, _format_time(value), va='center')
 
         plt.show()
+        print() # Print newline
 
     def get_duration(self, label):
         index = self.labels.index(label)

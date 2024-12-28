@@ -31,6 +31,7 @@ fonttools==4.55.3
 fqdn==1.5.1
 frozenlist==1.5.0
 fsspec==2024.9.0
+GPUtil==1.4.0
 h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
@@ -86,6 +87,7 @@ propcache==0.2.1
 psutil==6.1.1
 ptyprocess==0.7.0
 pure_eval==0.2.3
+py-cpuinfo==9.0.0
 pyarrow==18.1.0
 pycparser==2.22
 Pygments==2.18.0
