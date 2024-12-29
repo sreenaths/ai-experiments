@@ -43,6 +43,10 @@ class DurationMagics(Magics):
 
     @cell_magic
     def duration(self, line, cell):
+        """
+            inspired by time magics
+            https://github.com/ipython/ipython/blob/main/IPython/core/magics/execution.py#L1231
+        """
         self.labels.append(line.strip())
         self.durations.append(-1)
 
@@ -75,20 +79,21 @@ class DurationMagics(Magics):
         labels = self.labels[::-1]
         durations = self.durations[::-1]
 
-        plt.figure(figsize=(14, 6))
+        plt.figure(figsize=[15, len(labels)/2])
 
         if mode == "LOG":
             plt.xscale('log')
-            plt.xlabel('Duration (Log)')
+            plt.xlabel('Duration (Logarithmic)')
         else:
             plt.xlabel('Duration')
 
         plt.barh(labels, durations)
 
         for i, value in enumerate(durations):
-            plt.text(value * 1.01, i, _format_time(value), va='center')
+            plt.text(value, i, " " + _format_time(value), va='center')
 
         plt.show()
+
         print() # Print newline
 
     def get_duration(self, label):
