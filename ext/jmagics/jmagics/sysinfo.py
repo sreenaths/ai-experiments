@@ -31,6 +31,8 @@ class SysInfoMagics(Magics):
         for gpu in gpus:
             print(f"GPU {gpu.id} Name: {gpu.name}")
             print(f"GPU {gpu.id} Total Memory: {gpu.memoryTotal} MB")
+        if not gpus:
+            print("GPU information not available.")
 
 
 # Register the magic with IPython
